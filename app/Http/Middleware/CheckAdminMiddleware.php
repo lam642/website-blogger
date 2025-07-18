@@ -19,7 +19,7 @@ class CheckAdminMiddleware
             if(Auth::user()->role == 'admin'){
                 return $next($request);
             } else {
-                return redirect()->route('login')->with('error', 'Bạn không có quyền truy cập vào trang này');
+                return redirect()->route('admin.login')->with('error', 'Bạn không có quyền truy cập vào trang này');
             }
         } else {
             return redirect()->route('admin.login')->with('error', 'Bạn phải đăng nhập để truy cập');

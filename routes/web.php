@@ -18,7 +18,9 @@ use App\Http\Controllers\Client\TaiKhoanClientController;
 
 
 
-Route::prefix('admin')->group(function () {
+
+
+Route::prefix( '/admin')->group(function () {
 
     Route::get('/login', [AuthController::class, 'login'])->name('admin.login');
     Route::post('check/login', [AuthController::class, 'checkLogin'])->name('admin.checkLogin');
@@ -28,8 +30,7 @@ Route::prefix('admin')->group(function () {
     // Trang chủ thông kê
 
     // trang chủ thông kê
-    Route::get('/', [HomeController::class, 'index'])->name('admin.home');
-    Route::get('/thong-ke', [HomeController::class, 'index'])->name('thongKe');
+    Route::get('/thong-ke', [HomeController::class, 'index'])->name('admin.home');
 
 
     // danh mục
@@ -83,7 +84,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/tai-khoan/ban/{id}', [TaiKhoanController::class, 'ban'])->name('admin.taikhoan.ban');
     Route::put('/tai-khoan/update/{id}', [TaiKhoanController::class, 'update'])->name('admin.update.ban');
     Route::get('/tai-khoan/show/{id}', [TaiKhoanController::class, 'show'])->name('admin.taikhoan.show');
-    Route::delete('/tai-khoan/destroy/{id}', [TaiKhoanController::class, 'destroy'])->name('admin.taikhoan.destroy'); // có thể xóa tài khoản khi trường thời gian khóa là null
+    Route::delete('/tai-khoan/destroy/{id}', [TaiKhoanController::class, 'destroy'])->name('admin.taikhoan.destroy');
 
     // Report 
     Route::get('/report/bai-viet', [ReportController::class, 'danhSachBaoCaoBaiViet'])->name('admin.report.danhsachbaocaobaiviet');

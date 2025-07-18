@@ -73,6 +73,7 @@ class TaiKhoanController extends Controller
         $user = User::find($id);
         if($user->time_ban == null){
             $user->delete();
+            return redirect()->back()->with('success', 'Xóa thành công');
         }
         else{
             // Không cho phép xóa khi thời gian khóa vẫn còn
