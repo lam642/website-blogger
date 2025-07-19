@@ -27,7 +27,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
             if($user->role == 'admin') {
-                return redirect()->route('admin.post.index')->with('success', 'Đăng nhập thành công');
+                return redirect()->route('admin.home')->with('success', 'Đăng nhập thành công');
             } else {
                 return route('home');
             }

@@ -375,10 +375,10 @@
                                         <span class="date"><i class="fa fa-calendar"></i> {{ $baiViet->created_at->format('d/m/Y') }}</span>
                                         <span class="views"><i class="fa fa-eye"></i> {{ $baiViet->view_count ?? 0 }} lượt xem</span>
                            
-                                <figure class="blog-thumb" width="50%">
+                                <!-- <figure class="blog-thumb" width="50%">
                                     <img src="{{ asset('storage/' . $baiViet->thumbnail) }}" alt="blog image"
                                         width="50%">
-                                </figure>
+                                </figure> -->
                                 <div class="entry-summary">
 
                                     <p>

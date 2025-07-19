@@ -30,7 +30,7 @@ Route::prefix( '/admin')->group(function () {
     // Trang chủ thông kê
 
     // trang chủ thông kê
-    Route::get('/thong-ke', [HomeController::class, 'index'])->name('admin.home');
+    Route::get('/', [HomeController::class, 'index'])->name('admin.home');
 
 
     // danh mục
